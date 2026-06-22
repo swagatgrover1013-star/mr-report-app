@@ -1,0 +1,272 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+enum Role {
+  admin
+  manager
+  mr
+}
+
+enum UserStatus {
+  active
+  inactive
+}
+
+enum Tier {
+  platinum
+  gold
+  silver
+}
+
+enum PartyType {
+  doctor
+  chemist
+  stockist
+  meeting
+}
+
+enum VisitType {
+  new
+  follow_up
+  routine
+}
+
+enum FollowUpStatus {
+  pending
+  completed
+  missed
+}
+
+enum PlanVisitStatus {
+  pending
+  met
+  not_available
+  refused
+  other
+}
+
+enum RecommendationLevel {
+  strong
+  moderate
+  occasional
+  not_interested
+}
+
+enum LeaveType {
+  casual
+  sick
+}
+
+enum LeaveStatus {
+  pending
+  approved
+  rejected
+}
+
+enum PlanSubmissionStatus {
+  draft
+  submitted
+  approved
+}
+
+model User {
+  id           String     @id @default(cuid())
+  name         String
+  email        String     @unique
+  employeeId   String     @unique
+  role         Role
+  territory    String
+  phone        String     @default("")
+  avatarColor  String
+  status       UserStatus @default(active)
+  joinedAt     String
+  passwordHash String
+
+  visits          Visit[]
+  leaves          Leave[]
+  planEntries     PlanEntry[]
+  planSubmissions PlanSubmission[]
+
+  @@map("users")
+}
+
+model Doctor {
+  id              String   @id @default(cuid())
+  name            String
+  specialization  String
+  hospital        String   @default("")
+  city            String
+  area            String   @default("")
+  address         String   @default("")
+  phone           String   @default("")
+  email           String   @default("")
+  qualification   String   @default("")
+  visitFrequency  String   @default("Monthly")
+  notes           String   @db.Text
+  lastVisitDate   String?
+  totalVisits     Int      @default(0)
+  tier            Tier     @default(silver)
+
+  @@map("doctors")
+}
+
+model Stockist {
+  id               String   @id @default(cuid())
+  name             String
+  ownerName        String   @default("")
+  city             String
+  area             String   @default("")
+  address          String   @default("")
+  phone            String   @default("")
+  email            String   @default("")
+  gstNumber        String   @default("")
+  monthlyOrderValue Int     @default(0)
+  lastVisitDate    String?
+  totalVisits      Int      @default(0)
+  tier             Tier     @default(silver)
+
+  chemists Chemist[]
+
+  @@map("stockists")
+}
+
+model Chemist {
+  id            String   @id @default(cuid())
+  name          String
+  ownerName     String   @default("")
+  city          String
+  area          String   @default("")
+  address       String   @default("")
+  phone         String   @default("")
+  email         String   @default("")
+  gstNumber     String   @default("")
+  stockistId    String?
+  stockist      Stockist? @relation(fields: [stockistId], references: [id])
+  lastVisitDate String?
+  totalVisits   Int      @default(0)
+  tier          Tier     @default(silver)
+
+  @@map("chemists")
+}
+
+model Product {
+  id                 String  @id @default(cuid())
+  name               String
+  category           String  @default("General")
+  brand              String  @default("")
+  strength           String  @default("—")
+  dosageForm         String  @default("—")
+  description        String  @db.Text
+  totalMentions      Int     @default(0)
+  doctorsRecommending Int    @default(0)
+
+  visitProducts VisitProduct[]
+
+  @@map("products")
+}
+
+model Visit {
+  id                    String               @id @default(cuid())
+  partyType             PartyType
+  partyId               String
+  partyName             String
+  mrId                  String
+  mr                    User                 @relation(fields: [mrId], references: [id])
+  mrName                String
+  visitDate             String
+  visitTime             String
+  visitType             VisitType
+  city                  String
+  feedback              String               @db.Text
+  competitorProducts    String               @default("")
+  marketFeedback        String               @db.Text
+  nextFollowupDate      String?
+  followUpStatus        FollowUpStatus       @default(pending)
+  followUpNotes         String               @default("")
+  overallRecommendation RecommendationLevel
+  hasPersonalOrder      Boolean              @default(false)
+  orderProducts         Json
+  createdAt             DateTime             @default(now())
+
+  products VisitProduct[]
+
+  @@map("visits")
+  @@index([partyId])
+  @@index([mrId])
+}
+
+model VisitProduct {
+  id                 Int                  @id @default(autoincrement())
+  visitId             String
+  visit                Visit               @relation(fields: [visitId], references: [id], onDelete: Cascade)
+  productId           String
+  product              Product             @relation(fields: [productId], references: [id])
+  productName          String
+  sampleQuantity       Int                 @default(0)
+  recommendationLevel  RecommendationLevel
+
+  @@map("visit_products")
+}
+
+model PlanEntry {
+  id          String          @id @default(cuid())
+  date        String
+  partyType   PartyType
+  partyId     String
+  partyName   String
+  city        String
+  area        String          @default("")
+  productIds  Json
+  notes       String          @default("")
+  visitStatus PlanVisitStatus @default(pending)
+  mrId        String
+  mr          User            @relation(fields: [mrId], references: [id])
+  mrName      String
+  isJointVisit Boolean        @default(false)
+  jointWithId  String         @default("")
+  jointWithName String        @default("")
+
+  @@map("plan_entries")
+  @@index([date])
+  @@index([mrId])
+}
+
+model PlanSubmission {
+  id          String               @id @default(cuid())
+  userId      String
+  user        User                 @relation(fields: [userId], references: [id])
+  month       String
+  status      PlanSubmissionStatus @default(draft)
+  submittedAt DateTime?
+  approvedAt  DateTime?
+  approvedBy  String               @default("")
+  createdAt   DateTime             @default(now())
+  updatedAt   DateTime             @updatedAt
+
+  @@unique([userId, month])
+  @@map("plan_submissions")
+}
+
+model Leave {
+  id          String      @id @default(cuid())
+  userId      String
+  user        User        @relation(fields: [userId], references: [id])
+  userName    String
+  leaveType   LeaveType
+  fromDate    String
+  toDate      String
+  reason      String      @db.Text
+  status      LeaveStatus @default(pending)
+  reviewedBy  String      @default("")
+  reviewNotes String      @default("")
+  createdAt   DateTime    @default(now())
+
+  @@map("leaves")
+  @@index([userId])
+}
