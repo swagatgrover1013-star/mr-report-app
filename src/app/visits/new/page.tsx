@@ -123,7 +123,7 @@ function NewVisitPageInner() {
 
   // Step 3
   const [productLines, setProductLines] = useState<ProductLine[]>(
-    hasPrefill ? prefillProductIds.map((id) => ({ productId: id, sampleQuantity: 2 })) : []
+    hasPrefill ? prefillProductIds.map((id) => ({ productId: id, sampleQuantity: 0 })) : []
   );
   const [hasPersonalOrder, setHasPersonalOrder] = useState(false);
   const [orderLines, setOrderLines] = useState<OrderLine[]>([]);
@@ -175,7 +175,7 @@ function NewVisitPageInner() {
 
   const addProduct = (productId: string) => {
     if (productLines.find((p) => p.productId === productId)) return;
-    setProductLines((prev) => [...prev, { productId, sampleQuantity: 2 }]);
+    setProductLines((prev) => [...prev, { productId, sampleQuantity: 0 }]);
   };
 
   const removeProduct = (productId: string) => {

@@ -51,17 +51,25 @@ export default function VisitsPage() {
   const [partyFilter, setPartyFilter] = useState<string>("all");
   const [mrFilter, setMrFilter] = useState<string>("all");
   const [dayFilter, setDayFilter] = useState<string>(today);
+  const [otherRemarkEntryId, setOtherRemarkEntryId] = useState<string | null>(null);
+  const [otherRemarkText, setOtherRemarkText] = useState("");
 
   const todaysPlans = planEntries.filter((e) => e.date === today);
   const visitForEntry = (entry: PlanEntry) => visits.find((v) => v.partyId === entry.partyId && v.visitDate === entry.date);
 
-  const markStatus = async (entry: PlanEntry, status: PlanVisitStatus) => {
+  const markStatus = async (entry: PlanEntry, status: PlanVisitStatus, notes?: string) => {
     await fetch(`/api/plan-entries/${entry.id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ visitStatus: status }),
+      body: JSON.stringify(notes !== undefined ? { visitStatus: status, notes } : { visitStatus: status }),
     });
     await refetchPlans();
+  };
+
+  const submitOtherRemark = async (entry: PlanEntry) => {
+    await markStatus(entry, "other", otherRemarkText);
+    setOtherRemarkEntryId(null);
+    setOtherRemarkText("");
   };
 
   const goToVisitReport = (entry: PlanEntry) => {
@@ -129,40 +137,60 @@ export default function VisitsPage() {
               {todaysPlans.map((e) => {
                 const existing = visitForEntry(e);
                 return (
-                  <div key={e.id} className="flex items-center justify-between gap-3 rounded-(--radius) border border-border p-3 flex-wrap">
-                    <div className="min-w-0">
-                      <p className="text-sm font-medium text-ink truncate">{e.partyName}</p>
-                      <p className="text-xs text-slate truncate">{e.area ? `${e.area}, ` : ""}{e.city}</p>
+                  <div key={e.id} className="rounded-(--radius) border border-border p-3 space-y-2.5">
+                    <div className="flex items-center justify-between gap-3 flex-wrap">
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium text-ink truncate">{e.partyName}</p>
+                        <p className="text-xs text-slate truncate">{e.area ? `${e.area}, ` : ""}{e.city}</p>
+                      </div>
+                      <div className="flex items-center gap-1.5 flex-wrap">
+                        {e.visitStatus === "pending" && (
+                          <>
+                            <Button size="sm" onClick={() => markStatus(e, "met")}>
+                              <Check className="h-3.5 w-3.5" /> Met
+                            </Button>
+                            <Button size="sm" variant="outline" onClick={() => markStatus(e, "not_available")}>
+                              <UserX className="h-3.5 w-3.5" /> Not Available
+                            </Button>
+                            <Button size="sm" variant="outline" onClick={() => markStatus(e, "refused")}>
+                              <ShieldX className="h-3.5 w-3.5" /> Refused
+                            </Button>
+                            <Button size="sm" variant="outline" onClick={() => { setOtherRemarkEntryId(e.id); setOtherRemarkText(""); }}>
+                              <HelpCircle className="h-3.5 w-3.5" /> Other
+                            </Button>
+                          </>
+                        )}
+                        {e.visitStatus === "met" && (
+                          <Button size="sm" onClick={() => goToVisitReport(e)}>
+                            <ClipboardCheck className="h-3.5 w-3.5" /> {existing ? "View Visit Report" : "Submit Visit Report"}
+                          </Button>
+                        )}
+                        {(e.visitStatus === "not_available" || e.visitStatus === "refused" || e.visitStatus === "other") && (
+                          <>
+                            <Badge variant="secondary" className="capitalize">{e.visitStatus.replace("_", " ")}</Badge>
+                            <Button size="sm" variant="ghost" onClick={() => markStatus(e, "pending")}>Undo</Button>
+                          </>
+                        )}
+                      </div>
                     </div>
-                    <div className="flex items-center gap-1.5 flex-wrap">
-                      {e.visitStatus === "pending" && (
-                        <>
-                          <Button size="sm" onClick={() => markStatus(e, "met")}>
-                            <Check className="h-3.5 w-3.5" /> Met
-                          </Button>
-                          <Button size="sm" variant="outline" onClick={() => markStatus(e, "not_available")}>
-                            <UserX className="h-3.5 w-3.5" /> Not Available
-                          </Button>
-                          <Button size="sm" variant="outline" onClick={() => markStatus(e, "refused")}>
-                            <ShieldX className="h-3.5 w-3.5" /> Refused
-                          </Button>
-                          <Button size="sm" variant="outline" onClick={() => markStatus(e, "other")}>
-                            <HelpCircle className="h-3.5 w-3.5" /> Other
-                          </Button>
-                        </>
-                      )}
-                      {e.visitStatus === "met" && (
-                        <Button size="sm" onClick={() => goToVisitReport(e)}>
-                          <ClipboardCheck className="h-3.5 w-3.5" /> {existing ? "View Visit Report" : "Submit Visit Report"}
-                        </Button>
-                      )}
-                      {(e.visitStatus === "not_available" || e.visitStatus === "refused" || e.visitStatus === "other") && (
-                        <>
-                          <Badge variant="secondary" className="capitalize">{e.visitStatus.replace("_", " ")}</Badge>
-                          <Button size="sm" variant="ghost" onClick={() => markStatus(e, "pending")}>Undo</Button>
-                        </>
-                      )}
-                    </div>
+
+                    {otherRemarkEntryId === e.id && (
+                      <div className="flex items-center gap-2">
+                        <Input
+                          autoFocus
+                          placeholder="Add a remark for 'Other'..."
+                          value={otherRemarkText}
+                          onChange={(ev) => setOtherRemarkText(ev.target.value)}
+                          className="h-9"
+                        />
+                        <Button size="sm" onClick={() => submitOtherRemark(e)}>Save</Button>
+                        <Button size="sm" variant="ghost" onClick={() => { setOtherRemarkEntryId(null); setOtherRemarkText(""); }}>Cancel</Button>
+                      </div>
+                    )}
+
+                    {e.visitStatus === "other" && e.notes && (
+                      <p className="text-xs text-slate-light">{e.notes}</p>
+                    )}
                   </div>
                 );
               })}

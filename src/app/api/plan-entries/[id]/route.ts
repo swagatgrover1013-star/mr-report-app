@@ -19,7 +19,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
   const body = await request.json().catch(() => null);
   if (!body) return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
 
-  const isStatusOnlyUpdate = Object.keys(body).every((k) => k === "visitStatus");
+  const isStatusOnlyUpdate = Object.keys(body).every((k) => k === "visitStatus" || k === "notes");
   if (!isManager && !isStatusOnlyUpdate) {
     const month = (body.date ?? existing.date).slice(0, 7);
     if (isMonthLocked(month)) {
