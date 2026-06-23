@@ -626,7 +626,11 @@ function CreatePlanDialogContent({
   canCreate, creating, createError, onCreate, onCancel,
 }: CreatePlanDialogContentProps) {
   return (
-    <DialogContent className="max-w-xl max-h-[85vh] overflow-y-auto">
+    <DialogContent
+      className="max-w-xl max-h-[85vh] overflow-y-auto"
+      onPointerDownOutside={(e) => e.preventDefault()}
+      onInteractOutside={(e) => e.preventDefault()}
+    >
       <DialogHeader>
         <DialogTitle>Create Plan</DialogTitle>
         <DialogDescription>Schedule a full day at once — add every doctor, chemist, stockist, or meeting you have.</DialogDescription>
