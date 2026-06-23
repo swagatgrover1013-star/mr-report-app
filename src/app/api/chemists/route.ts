@@ -6,7 +6,10 @@ export async function GET() {
   const user = await getCurrentUser();
   if (!user) return NextResponse.json({ error: "Not authenticated." }, { status: 401 });
 
-  const chemists = await prisma.chemist.findMany({ orderBy: { name: "asc" } });
+  const chemists = await prisma.chemist.findMany({
+    where: user.role === "mr" ? { assignedMrId: user.id } : undefined,
+    orderBy: { name: "asc" },
+  });
   return NextResponse.json({ chemists });
 }
 
@@ -31,6 +34,7 @@ export async function POST(request: Request) {
       gstNumber: body.gstNumber ?? "",
       stockistId: body.stockistId ?? null,
       tier: body.tier ?? "silver",
+      assignedMrId: user.role === "mr" ? user.id : (body.assignedMrId ?? null),
     },
   });
 

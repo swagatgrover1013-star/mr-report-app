@@ -8,7 +8,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { RecommendationBadge } from "@/components/visits/recommendation-badge";
 import { useVisit } from "@/lib/hooks/use-visits";
 import { useDoctors } from "@/lib/hooks/use-doctors";
 import { useChemists } from "@/lib/hooks/use-chemists";
@@ -25,6 +24,7 @@ import {
   CalendarClock,
   Pencil,
   Loader2,
+  ShoppingCart,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -111,7 +111,6 @@ export default function VisitDetailPage() {
                     <h2 className="font-display text-2xl">{visit.partyName}</h2>
                     <p className="text-sm text-porcelain/70 mt-1">{partySubtitle}</p>
                   </div>
-                  <RecommendationBadge level={visit.overallRecommendation} className="shrink-0" />
                 </div>
               </div>
 
@@ -163,13 +162,37 @@ export default function VisitDetailPage() {
                           <p className="text-sm font-medium text-ink">{p.productName}</p>
                           <p className="text-xs text-slate mt-0.5">{p.sampleQuantity} samples given</p>
                         </div>
-                        <RecommendationBadge level={p.recommendationLevel} />
                       </div>
                     ))}
                   </div>
                 </div>
 
                 <Separator />
+
+                {/* Personal Order Booking */}
+                {visit.hasPersonalOrder && (
+                  <>
+                    <div>
+                      <div className="flex items-center gap-2 mb-3.5">
+                        <ShoppingCart className="h-4 w-4 text-indigo" />
+                        <h3 className="text-sm font-semibold text-ink">Personal Order Booking</h3>
+                      </div>
+                      <div className="space-y-2.5">
+                        {visit.orderProducts.map((o) => (
+                          <div key={o.productId} className="flex items-center justify-between gap-3 rounded-(--radius) bg-porcelain-dim p-3.5">
+                            <p className="text-sm font-medium text-ink">{o.productName}</p>
+                            <p className="text-xs text-slate">{o.units} units ordered</p>
+                          </div>
+                        ))}
+                        {visit.orderProducts.length === 0 && (
+                          <p className="text-sm text-slate-light">No ordered products recorded.</p>
+                        )}
+                      </div>
+                    </div>
+
+                    <Separator />
+                  </>
+                )}
 
                 {/* Feedback */}
                 <div>

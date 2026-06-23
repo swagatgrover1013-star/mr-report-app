@@ -1,11 +1,5 @@
 export type Role = "admin" | "manager" | "mr";
 
-export type RecommendationLevel =
-  | "strong"
-  | "moderate"
-  | "occasional"
-  | "not_interested";
-
 export type VisitType = "new" | "follow_up" | "routine";
 
 export type FollowUpStatus = "pending" | "completed" | "missed";
@@ -43,6 +37,7 @@ export interface Doctor {
   lastVisitDate: string | null;
   totalVisits: number;
   tier: "platinum" | "gold" | "silver";
+  assignedMrId: string | null;
 }
 
 export interface Chemist {
@@ -59,6 +54,7 @@ export interface Chemist {
   lastVisitDate: string | null;
   totalVisits: number;
   tier: Tier;
+  assignedMrId: string | null;
 }
 
 export interface Stockist {
@@ -93,7 +89,6 @@ export interface VisitProductEntry {
   productId: string;
   productName: string;
   sampleQuantity: number;
-  recommendationLevel: RecommendationLevel;
 }
 
 export interface OrderProductEntry {
@@ -120,7 +115,6 @@ export interface Visit {
   nextFollowupDate: string | null;
   followUpStatus: FollowUpStatus;
   followUpNotes: string;
-  overallRecommendation: RecommendationLevel;
   hasPersonalOrder: boolean;
   orderProducts: OrderProductEntry[];
 }
@@ -131,7 +125,6 @@ export interface ActivityItem {
   title: string;
   subtitle: string;
   timestamp: string;
-  recommendation?: RecommendationLevel;
 }
 
 export type PlanVisitStatus = "pending" | "met" | "not_available" | "refused" | "other";

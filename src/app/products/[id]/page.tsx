@@ -11,8 +11,6 @@ import { useVisits } from "@/lib/hooks/use-visits";
 import { useDoctors } from "@/lib/hooks/use-doctors";
 import { ArrowLeft, FlaskConical, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from "recharts";
-import { recommendationColors, recommendationLabels } from "@/data/mock";
 import Link from "next/link";
 
 export default function ProductDetailPage() {
@@ -45,17 +43,6 @@ export default function ProductDetailPage() {
       </AppShell>
     );
   }
-
-  const recCounts: Record<string, number> = { strong: 0, moderate: 0, occasional: 0, not_interested: 0 };
-  relatedVisits.forEach((v) => {
-    const entry = v.products.find((p) => p.productId === product.id);
-    if (entry) recCounts[entry.recommendationLevel]++;
-  });
-  const pieData = Object.entries(recCounts).map(([key, value]) => ({
-    name: recommendationLabels[key as keyof typeof recommendationLabels],
-    value,
-    color: recommendationColors[key as keyof typeof recommendationColors],
-  }));
 
   const doctorIds = Array.from(
     new Set(relatedVisits.filter((v) => v.partyType === "doctor").map((v) => v.partyId))
@@ -99,43 +86,23 @@ export default function ProductDetailPage() {
             </Card>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-            <Card>
-              <CardHeader>
-                <CardTitle>Recommendation Trends</CardTitle>
-                <CardDescription>Across all logged visits</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ResponsiveContainer width="100%" height={240}>
-                  <PieChart>
-                    <Pie data={pieData} dataKey="value" nameKey="name" innerRadius={60} outerRadius={90} paddingAngle={3} strokeWidth={0}>
-                      {pieData.map((entry, i) => <Cell key={i} fill={entry.color} />)}
-                    </Pie>
-                    <Tooltip contentStyle={{ background: "var(--ink)", border: "none", borderRadius: "10px", fontSize: "12px" }} itemStyle={{ color: "var(--porcelain)" }} />
-                    <Legend verticalAlign="bottom" iconType="circle" iconSize={8} formatter={(v) => <span style={{ fontSize: 12, color: "var(--slate)" }}>{v}</span>} />
-                  </PieChart>
-                </ResponsiveContainer>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Doctors Associated</CardTitle>
-                <CardDescription>{associatedDoctors.length} doctors have discussed this product</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-2.5 max-h-72 overflow-y-auto">
-                {associatedDoctors.map((d) => (
-                  <Link key={d.id} href={`/doctors/${d.id}`} className="flex items-center justify-between rounded-(--radius-sm) px-3 py-2.5 hover:bg-porcelain-dim transition-colors">
-                    <div>
-                      <p className="text-sm font-medium text-ink">{d.name}</p>
-                      <p className="text-xs text-slate">{d.hospital}</p>
-                    </div>
-                  </Link>
-                ))}
-                {associatedDoctors.length === 0 && <p className="text-sm text-slate-light text-center py-6">No doctors yet.</p>}
-              </CardContent>
-            </Card>
-          </div>
+          <Card>
+            <CardHeader>
+              <CardTitle>Doctors Associated</CardTitle>
+              <CardDescription>{associatedDoctors.length} doctors have discussed this product</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-2.5 max-h-72 overflow-y-auto">
+              {associatedDoctors.map((d) => (
+                <Link key={d.id} href={`/doctors/${d.id}`} className="flex items-center justify-between rounded-(--radius-sm) px-3 py-2.5 hover:bg-porcelain-dim transition-colors">
+                  <div>
+                    <p className="text-sm font-medium text-ink">{d.name}</p>
+                    <p className="text-xs text-slate">{d.hospital}</p>
+                  </div>
+                </Link>
+              ))}
+              {associatedDoctors.length === 0 && <p className="text-sm text-slate-light text-center py-6">No doctors yet.</p>}
+            </CardContent>
+          </Card>
         </div>
       </div>
     </AppShell>

@@ -30,6 +30,8 @@ import { useDoctors } from "@/lib/hooks/use-doctors";
 import { useChemists } from "@/lib/hooks/use-chemists";
 import { useStockists } from "@/lib/hooks/use-stockists";
 import { useProducts } from "@/lib/hooks/use-products";
+import { useUsers } from "@/lib/hooks/use-users";
+import { useCurrentUser } from "@/lib/hooks/use-current-user";
 import {
   Plus, Search, MapPin, Building2, Phone, ArrowUpRight, Loader2,
   User2, Store, Warehouse, Wallet, Stethoscope, FlaskConical,
@@ -71,6 +73,10 @@ function PartiesPageInner() {
   const { chemists, loading: chemistsLoading, refetch: refetchChemists } = useChemists();
   const { stockists, loading: stockistsLoading, refetch: refetchStockists } = useStockists();
   const { products, loading: productsLoading, refetch: refetchProducts } = useProducts();
+  const { users } = useUsers();
+  const { user: currentUser } = useCurrentUser();
+  const mrs = users.filter((u) => u.role === "mr");
+  const canAssignMr = currentUser?.role === "admin" || currentUser?.role === "manager";
 
   const switchTab = (tab: NetworkTab) => {
     setActiveTab(tab);
@@ -327,10 +333,10 @@ function PartiesPageInner() {
 
       <Dialog open={open} onOpenChange={setOpen}>
         {activeTab === "doctor" && (
-          <AddDoctorDialogContent onClose={() => setOpen(false)} onSaved={refetchDoctors} />
+          <AddDoctorDialogContent mrs={canAssignMr ? mrs : []} onClose={() => setOpen(false)} onSaved={refetchDoctors} />
         )}
         {activeTab === "chemist" && (
-          <AddChemistDialogContent stockists={stockists} onClose={() => setOpen(false)} onSaved={refetchChemists} />
+          <AddChemistDialogContent stockists={stockists} mrs={canAssignMr ? mrs : []} onClose={() => setOpen(false)} onSaved={refetchChemists} />
         )}
         {activeTab === "stockist" && (
           <AddStockistDialogContent onClose={() => setOpen(false)} onSaved={refetchStockists} />
@@ -357,11 +363,11 @@ export default function DoctorsPage() {
   );
 }
 
-function AddDoctorDialogContent({ onClose, onSaved }: { onClose: () => void; onSaved: () => void }) {
+function AddDoctorDialogContent({ mrs, onClose, onSaved }: { mrs: { id: string; name: string }[]; onClose: () => void; onSaved: () => void }) {
   const [form, setForm] = useState({
     name: "", specialization: "", qualification: "", hospital: "",
     city: "", area: "", address: "", phone: "", email: "",
-    visitFrequency: "Bi-weekly", notes: "",
+    visitFrequency: "Bi-weekly", notes: "", assignedMrId: "",
   });
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -379,7 +385,7 @@ function AddDoctorDialogContent({ onClose, onSaved }: { onClose: () => void; onS
     const res = await fetch("/api/doctors", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
+      body: JSON.stringify({ ...form, assignedMrId: form.assignedMrId || null }),
     });
     setSaving(false);
     if (!res.ok) {
@@ -449,6 +455,17 @@ function AddDoctorDialogContent({ onClose, onSaved }: { onClose: () => void; onS
           <Label>Notes</Label>
           <Textarea rows={3} placeholder="Preferences, interests, etc." value={form.notes} onChange={set("notes")} />
         </div>
+        {mrs.length > 0 && (
+          <div className="space-y-1.5 col-span-2">
+            <Label>Assign to MR</Label>
+            <Select value={form.assignedMrId} onValueChange={(v) => setForm((f) => ({ ...f, assignedMrId: v }))}>
+              <SelectTrigger><SelectValue placeholder="Select medical representative" /></SelectTrigger>
+              <SelectContent>
+                {mrs.map((m) => <SelectItem key={m.id} value={m.id}>{m.name}</SelectItem>)}
+              </SelectContent>
+            </Select>
+          </div>
+        )}
         {error && <p className="text-xs text-signal-rose col-span-2">{error}</p>}
       </div>
       <DialogFooter>
@@ -460,10 +477,10 @@ function AddDoctorDialogContent({ onClose, onSaved }: { onClose: () => void; onS
 }
 
 function AddChemistDialogContent({
-  stockists, onClose, onSaved,
-}: { stockists: { id: string; name: string }[]; onClose: () => void; onSaved: () => void }) {
+  stockists, mrs, onClose, onSaved,
+}: { stockists: { id: string; name: string }[]; mrs: { id: string; name: string }[]; onClose: () => void; onSaved: () => void }) {
   const [form, setForm] = useState({
-    name: "", ownerName: "", city: "", area: "", address: "", phone: "", gstNumber: "", stockistId: "",
+    name: "", ownerName: "", city: "", area: "", address: "", phone: "", gstNumber: "", stockistId: "", assignedMrId: "",
   });
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -481,7 +498,7 @@ function AddChemistDialogContent({
     const res = await fetch("/api/chemists", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...form, stockistId: form.stockistId || null }),
+      body: JSON.stringify({ ...form, stockistId: form.stockistId || null, assignedMrId: form.assignedMrId || null }),
     });
     setSaving(false);
     if (!res.ok) {
@@ -540,6 +557,17 @@ function AddChemistDialogContent({
             </SelectContent>
           </Select>
         </div>
+        {mrs.length > 0 && (
+          <div className="space-y-1.5 col-span-2">
+            <Label>Assign to MR</Label>
+            <Select value={form.assignedMrId} onValueChange={(v) => setForm((f) => ({ ...f, assignedMrId: v }))}>
+              <SelectTrigger><SelectValue placeholder="Select medical representative" /></SelectTrigger>
+              <SelectContent>
+                {mrs.map((m) => <SelectItem key={m.id} value={m.id}>{m.name}</SelectItem>)}
+              </SelectContent>
+            </Select>
+          </div>
+        )}
         {error && <p className="text-xs text-signal-rose col-span-2">{error}</p>}
       </div>
       <DialogFooter>

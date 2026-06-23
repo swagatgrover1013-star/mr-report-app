@@ -37,7 +37,19 @@ export const realUsers: User[] = [
     "phone": "",
     "avatarColor": "var(--brass)",
     "status": "active",
-    "joinedAt": "2023-01-01"
+    "joinedAt": "2026-06-19"
+  },
+  {
+    "id": "u4",
+    "name": "Anil Saini",
+    "email": "anil@aurelderma.com",
+    "employeeId": "MR-1003",
+    "role": "mr",
+    "territory": "Chandigarh",
+    "phone": "",
+    "avatarColor": "#7C9885",
+    "status": "active",
+    "joinedAt": "2026-06-23"
   }
 ];
 
@@ -46,7 +58,7 @@ export const realProducts: Product[] = [
     "id": "p1",
     "name": "Advafol",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -57,7 +69,7 @@ export const realProducts: Product[] = [
     "id": "p2",
     "name": "Advafol D",
     "category": "Gynaecology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -68,7 +80,7 @@ export const realProducts: Product[] = [
     "id": "p3",
     "name": "Advafol SB",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -79,7 +91,7 @@ export const realProducts: Product[] = [
     "id": "p4",
     "name": "Altafer XT",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -90,7 +102,7 @@ export const realProducts: Product[] = [
     "id": "p5",
     "name": "Aurel Active",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -101,7 +113,7 @@ export const realProducts: Product[] = [
     "id": "p6",
     "name": "Bellum",
     "category": "Dentistry",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -112,7 +124,7 @@ export const realProducts: Product[] = [
     "id": "p7",
     "name": "Betaedge",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -123,7 +135,7 @@ export const realProducts: Product[] = [
     "id": "p8",
     "name": "Calsma",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -134,7 +146,7 @@ export const realProducts: Product[] = [
     "id": "p9",
     "name": "Calsma D3",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -145,7 +157,7 @@ export const realProducts: Product[] = [
     "id": "p10",
     "name": "Calsma D3 Drops",
     "category": "Pediatrics",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Drops",
     "description": "",
@@ -156,7 +168,7 @@ export const realProducts: Product[] = [
     "id": "p11",
     "name": "Calsma D3 Shot",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Shots",
     "description": "",
@@ -167,7 +179,7 @@ export const realProducts: Product[] = [
     "id": "p12",
     "name": "Calsma D3 Shots",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Shots",
     "description": "",
@@ -178,7 +190,7 @@ export const realProducts: Product[] = [
     "id": "p13",
     "name": "Calsma D3 Tab",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Tablet",
     "description": "",
@@ -189,7 +201,7 @@ export const realProducts: Product[] = [
     "id": "p14",
     "name": "Calsma Gold",
     "category": "Orthopedics",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -200,7 +212,7 @@ export const realProducts: Product[] = [
     "id": "p15",
     "name": "Calsma Susp",
     "category": "Pediatrics",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Suspension",
     "description": "",
@@ -211,7 +223,7 @@ export const realProducts: Product[] = [
     "id": "p16",
     "name": "Calsma Syrup",
     "category": "Pediatrics",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Syrup",
     "description": "",
@@ -222,7 +234,7 @@ export const realProducts: Product[] = [
     "id": "p17",
     "name": "Calsma Tab",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Tablet",
     "description": "",
@@ -233,7 +245,7 @@ export const realProducts: Product[] = [
     "id": "p18",
     "name": "Calsma XT",
     "category": "Orthopedics",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -244,7 +256,7 @@ export const realProducts: Product[] = [
     "id": "p19",
     "name": "Collaedge",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -255,7 +267,7 @@ export const realProducts: Product[] = [
     "id": "p20",
     "name": "Digistom",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -266,7 +278,7 @@ export const realProducts: Product[] = [
     "id": "p21",
     "name": "Ducobact",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -277,7 +289,7 @@ export const realProducts: Product[] = [
     "id": "p22",
     "name": "Ducobact Bar",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Bar",
     "description": "",
@@ -288,7 +300,7 @@ export const realProducts: Product[] = [
     "id": "p23",
     "name": "Ducobact CV",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -299,7 +311,7 @@ export const realProducts: Product[] = [
     "id": "p24",
     "name": "Ducobact CV625",
     "category": "ENT",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -310,7 +322,7 @@ export const realProducts: Product[] = [
     "id": "p25",
     "name": "Ducofol",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -321,7 +333,7 @@ export const realProducts: Product[] = [
     "id": "p26",
     "name": "Ducopan DSR",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -332,7 +344,7 @@ export const realProducts: Product[] = [
     "id": "p27",
     "name": "Ducosoft Bar",
     "category": "Pediatrics",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Bar",
     "description": "",
@@ -343,7 +355,7 @@ export const realProducts: Product[] = [
     "id": "p28",
     "name": "Ducosoft Range",
     "category": "Pediatrics",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -354,7 +366,7 @@ export const realProducts: Product[] = [
     "id": "p29",
     "name": "Ducosoft Shampoo",
     "category": "Pediatrics",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Shampoo",
     "description": "",
@@ -365,7 +377,7 @@ export const realProducts: Product[] = [
     "id": "p30",
     "name": "Efacare",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -376,7 +388,7 @@ export const realProducts: Product[] = [
     "id": "p31",
     "name": "Efrosa",
     "category": "Gynaecology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -387,7 +399,7 @@ export const realProducts: Product[] = [
     "id": "p32",
     "name": "Euskin",
     "category": "Gynaecology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -398,7 +410,7 @@ export const realProducts: Product[] = [
     "id": "p33",
     "name": "Frisva",
     "category": "Gynaecology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -409,7 +421,7 @@ export const realProducts: Product[] = [
     "id": "p34",
     "name": "Gutstar",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -420,7 +432,7 @@ export const realProducts: Product[] = [
     "id": "p35",
     "name": "Iflahit Gel",
     "category": "Orthopedics",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Gel",
     "description": "",
@@ -431,7 +443,7 @@ export const realProducts: Product[] = [
     "id": "p36",
     "name": "Inflahit SP",
     "category": "Dentistry",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -442,7 +454,7 @@ export const realProducts: Product[] = [
     "id": "p37",
     "name": "Jakjoy",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -453,7 +465,7 @@ export const realProducts: Product[] = [
     "id": "p38",
     "name": "Just Me",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -464,7 +476,7 @@ export const realProducts: Product[] = [
     "id": "p39",
     "name": "Kezil Zp",
     "category": "Pediatrics",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -475,7 +487,7 @@ export const realProducts: Product[] = [
     "id": "p40",
     "name": "Moisoft",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -486,7 +498,7 @@ export const realProducts: Product[] = [
     "id": "p41",
     "name": "Moisoft Bar",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Bar",
     "description": "",
@@ -497,7 +509,7 @@ export const realProducts: Product[] = [
     "id": "p42",
     "name": "Moisoft Lotion",
     "category": "Endocrinology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Lotion",
     "description": "",
@@ -508,7 +520,7 @@ export const realProducts: Product[] = [
     "id": "p43",
     "name": "Montbre FX",
     "category": "ENT",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -519,7 +531,7 @@ export const realProducts: Product[] = [
     "id": "p44",
     "name": "Montbre L",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -530,7 +542,7 @@ export const realProducts: Product[] = [
     "id": "p45",
     "name": "Niafine",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -541,7 +553,7 @@ export const realProducts: Product[] = [
     "id": "p46",
     "name": "Obrana",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -552,7 +564,7 @@ export const realProducts: Product[] = [
     "id": "p47",
     "name": "Perato",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -563,7 +575,7 @@ export const realProducts: Product[] = [
     "id": "p48",
     "name": "Perato Cap",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Capsule",
     "description": "",
@@ -574,7 +586,7 @@ export const realProducts: Product[] = [
     "id": "p49",
     "name": "Rash X",
     "category": "Pediatrics",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -585,7 +597,7 @@ export const realProducts: Product[] = [
     "id": "p50",
     "name": "Rensa",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -596,7 +608,7 @@ export const realProducts: Product[] = [
     "id": "p51",
     "name": "Rensa Bar",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Bar",
     "description": "",
@@ -607,7 +619,7 @@ export const realProducts: Product[] = [
     "id": "p52",
     "name": "Rensa FW",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Face Wash",
     "description": "",
@@ -618,7 +630,7 @@ export const realProducts: Product[] = [
     "id": "p53",
     "name": "Resvoday",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -629,7 +641,7 @@ export const realProducts: Product[] = [
     "id": "p54",
     "name": "Resvoglo",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -640,7 +652,7 @@ export const realProducts: Product[] = [
     "id": "p55",
     "name": "Resvoglo H",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -651,7 +663,7 @@ export const realProducts: Product[] = [
     "id": "p56",
     "name": "Retiedge",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -662,7 +674,7 @@ export const realProducts: Product[] = [
     "id": "p57",
     "name": "Rezost Gold",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -673,7 +685,7 @@ export const realProducts: Product[] = [
     "id": "p58",
     "name": "Scabiedge",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -684,7 +696,7 @@ export const realProducts: Product[] = [
     "id": "p59",
     "name": "Sermon Gold",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -695,7 +707,7 @@ export const realProducts: Product[] = [
     "id": "p60",
     "name": "Sermon L",
     "category": "Ophthalmology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -706,7 +718,7 @@ export const realProducts: Product[] = [
     "id": "p61",
     "name": "Sermon Pro",
     "category": "General Physician",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -717,7 +729,7 @@ export const realProducts: Product[] = [
     "id": "p62",
     "name": "Sinfra",
     "category": "Pediatrics",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -728,7 +740,7 @@ export const realProducts: Product[] = [
     "id": "p63",
     "name": "Skinjoy",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -739,7 +751,7 @@ export const realProducts: Product[] = [
     "id": "p64",
     "name": "Skinjoy Shots",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Shots",
     "description": "",
@@ -750,7 +762,7 @@ export const realProducts: Product[] = [
     "id": "p65",
     "name": "Uresoft",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -761,7 +773,7 @@ export const realProducts: Product[] = [
     "id": "p66",
     "name": "Utease",
     "category": "Gynaecology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -772,7 +784,7 @@ export const realProducts: Product[] = [
     "id": "p67",
     "name": "Uvedge",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -783,7 +795,7 @@ export const realProducts: Product[] = [
     "id": "p68",
     "name": "Uvedge 30 Gel",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Gel",
     "description": "",
@@ -794,7 +806,7 @@ export const realProducts: Product[] = [
     "id": "p69",
     "name": "Uvedge Spf 50 Gel",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Gel",
     "description": "",
@@ -805,7 +817,7 @@ export const realProducts: Product[] = [
     "id": "p70",
     "name": "Velrisa",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -816,7 +828,7 @@ export const realProducts: Product[] = [
     "id": "p71",
     "name": "Vitaedge EC",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -827,7 +839,7 @@ export const realProducts: Product[] = [
     "id": "p72",
     "name": "Ylis",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "—",
     "description": "",
@@ -838,7 +850,7 @@ export const realProducts: Product[] = [
     "id": "p73",
     "name": "Zohair Serum",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Serum",
     "description": "",
@@ -849,7 +861,7 @@ export const realProducts: Product[] = [
     "id": "p74",
     "name": "Zohair Shampoo",
     "category": "Dermatology",
-    "brand": "Aurel Derma",
+    "brand": "Meridian Pharma",
     "strength": "—",
     "dosageForm": "Shampoo",
     "description": "",
@@ -905,7 +917,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c2",
@@ -920,7 +933,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "c3",
@@ -935,7 +949,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c4",
@@ -950,7 +965,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "c5",
@@ -965,7 +981,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "c6",
@@ -980,7 +997,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c7",
@@ -995,7 +1013,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c8",
@@ -1010,7 +1029,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c9",
@@ -1025,7 +1045,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "c10",
@@ -1040,7 +1061,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c11",
@@ -1055,7 +1077,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c12",
@@ -1070,7 +1093,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "c13",
@@ -1085,7 +1109,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c14",
@@ -1100,7 +1125,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "c15",
@@ -1115,7 +1141,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c16",
@@ -1130,7 +1157,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "c17",
@@ -1145,7 +1173,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "c18",
@@ -1160,7 +1189,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "c19",
@@ -1175,7 +1205,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "c20",
@@ -1190,7 +1221,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "c21",
@@ -1205,7 +1237,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c22",
@@ -1220,7 +1253,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c23",
@@ -1235,7 +1269,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c24",
@@ -1250,7 +1285,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c25",
@@ -1265,7 +1301,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "c26",
@@ -1280,7 +1317,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c27",
@@ -1295,7 +1333,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "c28",
@@ -1310,7 +1349,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c29",
@@ -1325,7 +1365,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c30",
@@ -1340,7 +1381,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "c31",
@@ -1355,7 +1397,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "c32",
@@ -1370,7 +1413,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c33",
@@ -1385,7 +1429,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "c34",
@@ -1400,7 +1445,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "c35",
@@ -1415,7 +1461,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "c36",
@@ -1430,7 +1477,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c37",
@@ -1445,7 +1493,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c38",
@@ -1460,7 +1509,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c39",
@@ -1475,7 +1525,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "c40",
@@ -1490,7 +1541,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "c41",
@@ -1505,7 +1557,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "c42",
@@ -1520,7 +1573,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c43",
@@ -1535,7 +1589,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "c44",
@@ -1550,7 +1605,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c45",
@@ -1565,7 +1621,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c46",
@@ -1580,7 +1637,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "c47",
@@ -1595,7 +1653,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c48",
@@ -1610,7 +1669,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "c49",
@@ -1625,7 +1685,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c50",
@@ -1640,7 +1701,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "c51",
@@ -1655,7 +1717,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "c52",
@@ -1670,7 +1733,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "c53",
@@ -1685,7 +1749,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c54",
@@ -1700,7 +1765,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "c55",
@@ -1715,7 +1781,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "c56",
@@ -1730,7 +1797,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "c57",
@@ -1745,7 +1813,8 @@ export const realChemists: Chemist[] = [
     "stockistId": "s1",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   }
 ];
 
@@ -1765,7 +1834,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo H, Resvoglo, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d2",
@@ -1782,7 +1852,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo H, Resvoglo, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d3",
@@ -1799,7 +1870,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoglo H, Scabiedge, Moisoft, Rensa.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d4",
@@ -1816,7 +1888,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo H, Scabiedge, Moisoft, Uvedge.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d5",
@@ -1833,7 +1906,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo H, Resvoglo, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d6",
@@ -1850,7 +1924,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoglo H, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d7",
@@ -1867,7 +1942,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo H.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d8",
@@ -1884,7 +1960,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo H.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d9",
@@ -1901,7 +1978,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo H, Resvoglo, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d10",
@@ -1918,7 +1996,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo H, Resvoglo, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d11",
@@ -1935,7 +2014,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo H, Resvoglo, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d12",
@@ -1952,7 +2032,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo H, Resvoglo, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d13",
@@ -1969,7 +2050,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo H, Resvoglo, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d14",
@@ -1986,7 +2068,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo H, Resvoglo, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d15",
@@ -2003,7 +2086,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma D3 Tab, Calsma D3 Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d16",
@@ -2020,7 +2104,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma D3 Tab, Montbre L.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d17",
@@ -2037,7 +2122,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Calsma, Advafol, Resvoglo H, Calsma D3, Digistom.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d18",
@@ -2054,7 +2140,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Calsma, Advafol, Resvoglo H, Calsma D3, Digistom.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d19",
@@ -2071,7 +2158,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Calsma, Advafol, Resvoglo H, Calsma D3, Digistom.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d20",
@@ -2088,7 +2176,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Calsma, Advafol, Resvoglo H, Calsma D3, Digistom.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d21",
@@ -2105,7 +2194,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Aurel Active, Digistom, Advafol, Calsma, Calsma D3.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d22",
@@ -2122,7 +2212,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Calsma D3, Digistom.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d23",
@@ -2139,7 +2230,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Calsma D3, Digistom.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d24",
@@ -2156,7 +2248,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Calsma D3, Digistom.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d25",
@@ -2173,7 +2266,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Calsma, Advafol, Resvoglo H.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d26",
@@ -2190,7 +2284,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Aurel Active, Digistom, Advafol, Calsma, Calsma D3.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d27",
@@ -2207,7 +2302,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma, Calsma D3, Advafol, Aurel Active.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d28",
@@ -2224,7 +2320,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Calsma.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d29",
@@ -2241,7 +2338,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Calsma.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d30",
@@ -2258,7 +2356,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Sermon L.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d31",
@@ -2275,7 +2374,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Utease, Calsma.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d32",
@@ -2292,7 +2392,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Advafol, Resvoglo H, Efrosa, Sermon Pro, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d33",
@@ -2309,7 +2410,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma D3, Digistom, Obrana, Ducobact.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d34",
@@ -2326,7 +2428,8 @@ export const realDoctors: Doctor[] = [
     "notes": "",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d35",
@@ -2343,7 +2446,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma, Efrosa, Calsma D3.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d36",
@@ -2360,7 +2464,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Digistom.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d37",
@@ -2377,7 +2482,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Efrosa, Calsma D3.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d38",
@@ -2394,7 +2500,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma Gold, Calsma XT.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d39",
@@ -2411,7 +2518,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Sermon L.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d40",
@@ -2428,7 +2536,8 @@ export const realDoctors: Doctor[] = [
     "notes": "",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d41",
@@ -2445,7 +2554,8 @@ export const realDoctors: Doctor[] = [
     "notes": "",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d42",
@@ -2462,7 +2572,8 @@ export const realDoctors: Doctor[] = [
     "notes": "",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d43",
@@ -2479,7 +2590,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma, Calsma D3.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d44",
@@ -2496,7 +2608,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Iflahit Gel, Calsma, Calsma D3.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d45",
@@ -2513,7 +2626,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Sermon L.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d46",
@@ -2530,7 +2644,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Collaedge, Ducobact.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d47",
@@ -2547,7 +2662,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Ducobact CV, Bellum, Inflahit SP.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d48",
@@ -2564,7 +2680,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Ducosoft Range, Calsma Syrup, Calsma D3.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d49",
@@ -2581,7 +2698,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Calsma XT, Calsma D3 Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d50",
@@ -2598,7 +2716,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Calsma D3.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d51",
@@ -2615,7 +2734,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d52",
@@ -2632,7 +2752,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma D3, Calsma.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d53",
@@ -2649,7 +2770,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Digistom.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d54",
@@ -2666,7 +2788,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma, Calsma D3.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d55",
@@ -2683,7 +2806,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma D3.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d56",
@@ -2700,7 +2824,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d57",
@@ -2717,7 +2842,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma D3, Calsma.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d58",
@@ -2734,7 +2860,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Ducobact CV625, Gutstar, Montbre L, Montbre FX.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d59",
@@ -2751,7 +2878,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma, Aurel Active, Calsma D3 Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d60",
@@ -2768,7 +2896,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Ducosoft Bar, Rash X, Calsma D3 Drops.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d61",
@@ -2785,7 +2914,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Ducosoft Range, Calsma D3 Drops.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d62",
@@ -2802,7 +2932,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Ducosoft Range.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d63",
@@ -2819,7 +2950,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Ducosoft Range, Sinfra.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d64",
@@ -2836,7 +2968,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Ducosoft Range, Calsma D3, Calsma Susp.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d65",
@@ -2853,7 +2986,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Ducosoft Range, Calsma D3, Calsma Susp, Sinfra.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d66",
@@ -2870,7 +3004,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Ducosoft Range.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d67",
@@ -2887,7 +3022,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efacare, Calsma, Resvoglo H, Calsma, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d68",
@@ -2904,7 +3040,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo H, Resvoglo, Perato, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d69",
@@ -2921,7 +3058,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo, Resvoglo H, Calsma D3 Shots, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d70",
@@ -2938,7 +3076,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo, Resvoglo H, Calsma D3 Shots, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d71",
@@ -2955,7 +3094,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoglo, Resvoday, Resvoglo H, Perato, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d72",
@@ -2972,7 +3112,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Calsma D3, Just Me.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d73",
@@ -2989,7 +3130,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Resvoglo, Resvoday, Resvoglo H, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d74",
@@ -3006,7 +3148,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo, Resvoglo H, Calsma D3 Shots, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d75",
@@ -3023,7 +3166,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoglo H, Efacare, Resvoday, Resvoglo H, Skinjoy.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d76",
@@ -3040,7 +3184,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Skinjoy Shots, Calsma, Resvoglo H, Calsma D3 Shots, Aurel Active.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d77",
@@ -3057,7 +3202,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo, Resvoglo H, Calsma D3 Shots, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d78",
@@ -3074,7 +3220,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo, Resvoglo H, Calsma, Altafer XT.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d79",
@@ -3091,7 +3238,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoglo H, Resvoday, Perato, Resvoglo, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d80",
@@ -3108,7 +3256,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoglo H, Resvoday, Perato, Resvoglo, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d81",
@@ -3125,7 +3274,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoglo H, Resvoday, Perato, Resvoglo, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d82",
@@ -3142,7 +3292,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo H, Perato.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d83",
@@ -3159,7 +3310,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Resvoglo H, Resvoday, Perato, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d84",
@@ -3176,7 +3328,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoglo, Resvoday, Resvoglo H, Calsma D3 Shots, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d85",
@@ -3193,7 +3346,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoglo, Resvoday, Resvoglo H, Calsma D3 Shots, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d86",
@@ -3210,7 +3364,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoglo, Resvoday, Resvoglo H, Calsma D3 Shots, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d87",
@@ -3227,7 +3382,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo, Resvoglo H, Skinjoy, Calsma D3.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d88",
@@ -3244,7 +3400,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo, Resvoglo H, Efacare, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d89",
@@ -3261,7 +3418,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo, Resvoglo H, Efacare, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d90",
@@ -3278,7 +3436,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo, Resvoglo H, Efacare, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d91",
@@ -3295,7 +3454,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma Gold, Advafol, Resvoglo H, Altafer XT, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d92",
@@ -3312,7 +3472,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo, Resvoglo H, Efacare, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d93",
@@ -3329,7 +3490,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo, Resvoglo H, Efacare, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d94",
@@ -3346,7 +3508,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo, Resvoglo H, Perato, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d95",
@@ -3363,7 +3526,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo, Resvoglo H, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d96",
@@ -3380,7 +3544,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo H, Aurel Active, Resvoglo, Collaedge.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d97",
@@ -3397,7 +3562,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo H, Resvoglo, Perato, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d98",
@@ -3414,7 +3580,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Resvoglo H, Resvoglo, Collaedge, Skinjoy Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d99",
@@ -3431,7 +3598,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Ducofol, Collaedge, Resvoglo H, Skinjoy Shots, Utease.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d100",
@@ -3448,7 +3616,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Perato Cap, Resvoglo H, Calsma D3 Shots, Efacare.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d101",
@@ -3465,7 +3634,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Perato Cap, Resvoglo H, Calsma D3 Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d102",
@@ -3482,7 +3652,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Perato, Calsma D3, Resvoglo H, Euskin, Efacare.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d103",
@@ -3499,7 +3670,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Perato Cap, Resvoglo H, Resvoglo, Efacare.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d104",
@@ -3516,7 +3688,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Perato Cap, Resvoglo H, Resvoglo, Efacare.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d105",
@@ -3533,7 +3706,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Perato Cap, Resvoglo H, Resvoglo, Efacare.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d106",
@@ -3550,7 +3724,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Perato Cap, Resvoglo H, Resvoglo, Efacare.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d107",
@@ -3567,7 +3742,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Perato Cap, Resvoglo H, Resvoglo, Efacare.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d108",
@@ -3584,7 +3760,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Perato Cap, Resvoglo H, Resvoglo, Efacare.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d109",
@@ -3601,7 +3778,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Perato Cap, Resvoglo H, Resvoglo, Efacare.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d110",
@@ -3618,7 +3796,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Resvoday, Perato Cap, Resvoglo H, Resvoglo, Efacare.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d111",
@@ -3635,7 +3814,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Perato, Resvoday, Resvoglo H, Calsma D3 Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d112",
@@ -3652,7 +3832,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Perato, Resvoday, Resvoglo H, Calsma D3 Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d113",
@@ -3669,7 +3850,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Perato, Resvoday, Resvoglo H, Calsma D3 Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d114",
@@ -3686,7 +3868,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Utease, Calsma, Resvoglo H, Sermon Gold, Efrosa.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d115",
@@ -3703,7 +3886,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Resvoglo H, Efacare, Perato, Sermon Gold.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d116",
@@ -3720,7 +3904,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Utease, Calsma, Gutstar, Sermon L.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d117",
@@ -3737,7 +3922,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Calsma, Utease, Gutstar, Efacare.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d118",
@@ -3754,7 +3940,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma D3, Calsma, Digistom.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d119",
@@ -3771,7 +3958,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Resvoglo H, Calsma, Utease, Gutstar.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d120",
@@ -3788,7 +3976,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Calsma, Calsma D3, Digistom, Resvoglo H.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d121",
@@ -3805,7 +3994,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Resvoglo H, Gutstar, Efrosa.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d122",
@@ -3822,7 +4012,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Resvoglo H, Sermon Gold, Calsma D3 Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d123",
@@ -3839,7 +4030,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Aurel Active, Gutstar, Utease, Calsma D3 Shots, Just Me.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d124",
@@ -3856,7 +4048,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Utease, Calsma, Gutstar, Digistom.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d125",
@@ -3873,7 +4066,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma D3, Aurel Active, Calsma, Calsma Gold.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d126",
@@ -3890,7 +4084,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Calsma, Digistom, Calsma D3 Shots, Gutstar.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d127",
@@ -3907,7 +4102,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Gutstar, Calsma, Calsma Gold, Advafol.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d128",
@@ -3924,7 +4120,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Advafol, Gutstar, Calsma, Calsma D3.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d129",
@@ -3941,7 +4138,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Gutstar, Utease, Calsma.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d130",
@@ -3958,7 +4156,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma D3, Sermon Gold, Sermon L, Montbre L, Ducobact CV.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d131",
@@ -3975,7 +4174,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma D3, Sermon Gold, Sermon L, Montbre L, Ducobact CV.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d132",
@@ -3992,7 +4192,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma D3, Aurel Active.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d133",
@@ -4009,7 +4210,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Advafol D, Calsma, Gutstar.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d134",
@@ -4026,7 +4228,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Calsma, Calsma D3, Gutstar.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d135",
@@ -4043,7 +4246,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Gutstar, Calsma D3 Shots.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d136",
@@ -4060,7 +4264,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Gutstar, Advafol, Digistom, Calsma D3.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d137",
@@ -4077,7 +4282,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Calsma, Gutstar, Calsma D3 Shots, Digistom.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d138",
@@ -4094,7 +4300,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma, Calsma D3.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d139",
@@ -4111,7 +4318,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Sermon Gold, Digistom, Ducopan DSR, Gutstar.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d140",
@@ -4128,7 +4336,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma D3, Advafol, Calsma, Gutstar.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d141",
@@ -4145,7 +4354,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma D3, Advafol, Calsma, Gutstar.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d142",
@@ -4162,7 +4372,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma D3, Advafol, Calsma, Gutstar.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d143",
@@ -4179,7 +4390,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Calsma D3, Calsma, Advafol, Gutstar.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d144",
@@ -4196,7 +4408,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d145",
@@ -4213,7 +4426,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d146",
@@ -4230,7 +4444,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d147",
@@ -4247,7 +4462,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d148",
@@ -4264,7 +4480,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d149",
@@ -4281,7 +4498,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d150",
@@ -4298,7 +4516,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d151",
@@ -4315,7 +4534,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Utease, Euskin, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d152",
@@ -4332,7 +4552,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Euskin, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d153",
@@ -4349,7 +4570,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Utease, Euskin, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d154",
@@ -4366,7 +4588,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Euskin.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d155",
@@ -4383,7 +4606,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Euskin, Utease, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d156",
@@ -4400,7 +4624,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Euskin, Calsma, Utease, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d157",
@@ -4417,7 +4642,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Euskin, Calsma, Utease, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "silver"
+    "tier": "silver",
+    "assignedMrId": null
   },
   {
     "id": "d158",
@@ -4434,7 +4660,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Utease, Euskin, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d159",
@@ -4451,7 +4678,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Utease, Euskin, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d160",
@@ -4468,7 +4696,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Euskin, Calsma, Utease, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d161",
@@ -4485,7 +4714,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Utease, Euskin, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d162",
@@ -4502,7 +4732,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Utease, Euskin, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d163",
@@ -4519,7 +4750,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Utease, Euskin, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "platinum"
+    "tier": "platinum",
+    "assignedMrId": null
   },
   {
     "id": "d164",
@@ -4536,7 +4768,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Euskin, Utease, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d165",
@@ -4553,7 +4786,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Euskin, Utease, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   },
   {
     "id": "d166",
@@ -4570,7 +4804,8 @@ export const realDoctors: Doctor[] = [
     "notes": "Promoted: Efrosa, Calsma, Euskin, Utease, Frisva.",
     "lastVisitDate": null,
     "totalVisits": 0,
-    "tier": "gold"
+    "tier": "gold",
+    "assignedMrId": null
   }
 ];
 

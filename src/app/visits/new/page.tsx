@@ -10,13 +10,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { StepIndicator } from "@/components/visits/step-indicator";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { useDoctors } from "@/lib/hooks/use-doctors";
 import { useChemists } from "@/lib/hooks/use-chemists";
 import { useStockists } from "@/lib/hooks/use-stockists";
@@ -39,8 +32,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
-import type { PartyType, RecommendationLevel, VisitType } from "@/types";
-import { recommendationLabels } from "@/data/mock";
+import type { PartyType, VisitType } from "@/types";
 
 const STEPS = [
   "Visit Type",
@@ -65,7 +57,6 @@ const feedbackLabel: Record<PartyType, string> = {
 interface ProductLine {
   productId: string;
   sampleQuantity: number;
-  recommendationLevel: RecommendationLevel;
 }
 
 interface OrderLine {
@@ -132,7 +123,7 @@ function NewVisitPageInner() {
 
   // Step 3
   const [productLines, setProductLines] = useState<ProductLine[]>(
-    hasPrefill ? prefillProductIds.map((id) => ({ productId: id, sampleQuantity: 2, recommendationLevel: "moderate" as RecommendationLevel })) : []
+    hasPrefill ? prefillProductIds.map((id) => ({ productId: id, sampleQuantity: 2 })) : []
   );
   const [hasPersonalOrder, setHasPersonalOrder] = useState(false);
   const [orderLines, setOrderLines] = useState<OrderLine[]>([]);
@@ -141,8 +132,6 @@ function NewVisitPageInner() {
   const [feedback, setFeedback] = useState("");
   const [competitorProducts, setCompetitorProducts] = useState("");
   const [marketFeedback, setMarketFeedback] = useState("");
-
-  const overallRec: RecommendationLevel = "moderate";
 
   const prefilledFromEdit = useRef(false);
   useEffect(() => {
@@ -156,7 +145,6 @@ function NewVisitPageInner() {
     setProductLines(editingVisit.products.map((p) => ({
       productId: p.productId,
       sampleQuantity: p.sampleQuantity,
-      recommendationLevel: p.recommendationLevel,
     })));
     setHasPersonalOrder(editingVisit.hasPersonalOrder);
     setOrderLines(editingVisit.orderProducts.map((o) => ({ productId: o.productId, units: o.units })));
@@ -187,7 +175,7 @@ function NewVisitPageInner() {
 
   const addProduct = (productId: string) => {
     if (productLines.find((p) => p.productId === productId)) return;
-    setProductLines((prev) => [...prev, { productId, sampleQuantity: 2, recommendationLevel: "moderate" }]);
+    setProductLines((prev) => [...prev, { productId, sampleQuantity: 2 }]);
   };
 
   const removeProduct = (productId: string) => {
@@ -237,7 +225,6 @@ function NewVisitPageInner() {
           productId: line.productId,
           productName: products.find((p) => p.id === line.productId)?.name ?? "",
           sampleQuantity: line.sampleQuantity,
-          recommendationLevel: line.recommendationLevel,
         })),
         hasPersonalOrder,
         orderProducts: hasPersonalOrder ? orderLines.map((o) => ({
@@ -248,7 +235,6 @@ function NewVisitPageInner() {
         feedback,
         competitorProducts,
         marketFeedback,
-        overallRecommendation: overallRec,
       }),
     });
     setSubmitting(false);
@@ -510,7 +496,7 @@ function NewVisitPageInner() {
                                     <X className="h-4 w-4" />
                                   </button>
                                 </div>
-                                <div className="grid grid-cols-2 gap-3 mt-3.5">
+                                <div className="mt-3.5">
                                   <div className="space-y-1.5">
                                     <Label className="text-xs">{partyType === "doctor" ? "Sample Units Requested" : "Quantity"}</Label>
                                     <Input
@@ -520,20 +506,6 @@ function NewVisitPageInner() {
                                       onChange={(e) => updateProductLine(line.productId, { sampleQuantity: Number(e.target.value) })}
                                       className="h-9"
                                     />
-                                  </div>
-                                  <div className="space-y-1.5">
-                                    <Label className="text-xs">Recommendation</Label>
-                                    <Select
-                                      value={line.recommendationLevel}
-                                      onValueChange={(v) => updateProductLine(line.productId, { recommendationLevel: v as RecommendationLevel })}
-                                    >
-                                      <SelectTrigger className="h-9"><SelectValue /></SelectTrigger>
-                                      <SelectContent>
-                                        {Object.entries(recommendationLabels).map(([k, label]) => (
-                                          <SelectItem key={k} value={k}>{label}</SelectItem>
-                                        ))}
-                                      </SelectContent>
-                                    </Select>
                                   </div>
                                 </div>
                               </motion.div>

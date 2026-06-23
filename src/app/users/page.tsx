@@ -35,6 +35,7 @@ import { useUsers } from "@/lib/hooks/use-users";
 import { Plus, MoreVertical, Search, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { format } from "date-fns";
+import { useRouter } from "next/navigation";
 
 const roleBadge = {
   admin: "ink" as const,
@@ -43,6 +44,7 @@ const roleBadge = {
 };
 
 export default function UsersPage() {
+  const router = useRouter();
   const { users, loading, refetch } = useUsers();
   const [search, setSearch] = useState("");
   const [open, setOpen] = useState(false);
@@ -111,12 +113,15 @@ export default function UsersPage() {
                     return (
                       <motion.tr key={u.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: Math.min(i * 0.04, 0.3) }} className="border-b border-border last:border-0 hover:bg-porcelain-dim/40 transition-colors">
                         <td className="px-5 py-3.5">
-                          <div className="flex items-center gap-2.5">
+                          <div
+                            className={u.role === "mr" ? "flex items-center gap-2.5 cursor-pointer" : "flex items-center gap-2.5"}
+                            onClick={() => u.role === "mr" && router.push(`/users/${u.id}`)}
+                          >
                             <Avatar className="h-8 w-8">
                               <AvatarFallback style={{ background: u.avatarColor }}>{initials}</AvatarFallback>
                             </Avatar>
                             <div>
-                              <p className="font-medium text-ink">{u.name}</p>
+                              <p className="font-medium text-ink hover:text-indigo transition-colors">{u.name}</p>
                               <p className="text-xs text-slate">{u.email}</p>
                             </div>
                           </div>

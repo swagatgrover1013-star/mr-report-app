@@ -5,7 +5,6 @@ import { TopBar } from "@/components/layout/top-bar";
 import { StatCard } from "@/components/dashboard/stat-card";
 import { ActivityTimeline } from "@/components/dashboard/activity-timeline";
 import { VisitsPerDayChart } from "@/components/dashboard/visits-per-day-chart";
-import { RecommendationDonut } from "@/components/dashboard/recommendation-donut";
 import { TopProductsChart } from "@/components/dashboard/top-products-chart";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -17,7 +16,6 @@ import {
   CalendarCheck,
   Stethoscope,
   Users,
-  ThumbsUp,
   Crown,
   Plus,
   ArrowRight,
@@ -44,7 +42,6 @@ export default function DashboardPage() {
 
   const uniquePartiesCovered = new Set(visits.map((v) => v.partyId)).size;
   const pendingFollowUps = visits.filter((v) => v.followUpStatus === "pending").length;
-  const strongRecs = visits.filter((v) => v.overallRecommendation === "strong").length;
 
   const topProduct = [...products].sort((a, b) => b.totalMentions - a.totalMentions)[0];
 
@@ -82,11 +79,10 @@ export default function DashboardPage() {
         </div>
 
         {/* Stat cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
           <StatCard label="Today's Visits" value={todaysVisits} icon={Stethoscope} delta="+12%" index={0} />
           <StatCard label="Weekly Visits" value={weeklyVisits} icon={CalendarCheck} delta="+8%" index={1} />
           <StatCard label="Network Covered" value={uniquePartiesCovered} icon={Users} accent="brass" index={2} />
-          <StatCard label="Strong Recommendations" value={strongRecs} icon={ThumbsUp} delta="+5%" index={3} />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
@@ -124,18 +120,7 @@ export default function DashboardPage() {
           </Card>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-          {/* Recommendation distribution */}
-          <Card>
-            <CardHeader>
-              <CardTitle>Recommendation Mix</CardTitle>
-              <CardDescription>Across all logged visits</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <RecommendationDonut visits={visits} />
-            </CardContent>
-          </Card>
-
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           {/* Top products */}
           <Card>
             <CardHeader>

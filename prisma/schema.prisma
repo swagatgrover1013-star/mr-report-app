@@ -51,13 +51,6 @@ enum PlanVisitStatus {
   other
 }
 
-enum RecommendationLevel {
-  strong
-  moderate
-  occasional
-  not_interested
-}
-
 enum LeaveType {
   casual
   sick
@@ -92,6 +85,8 @@ model User {
   leaves          Leave[]
   planEntries     PlanEntry[]
   planSubmissions PlanSubmission[]
+  assignedDoctors  Doctor[]  @relation("DoctorAssignedMr")
+  assignedChemists Chemist[] @relation("ChemistAssignedMr")
 
   @@map("users")
 }
@@ -112,8 +107,11 @@ model Doctor {
   lastVisitDate   String?
   totalVisits     Int      @default(0)
   tier            Tier     @default(silver)
+  assignedMrId    String?
+  assignedMr      User?    @relation("DoctorAssignedMr", fields: [assignedMrId], references: [id])
 
   @@map("doctors")
+  @@index([assignedMrId])
 }
 
 model Stockist {
@@ -151,8 +149,11 @@ model Chemist {
   lastVisitDate String?
   totalVisits   Int      @default(0)
   tier          Tier     @default(silver)
+  assignedMrId  String?
+  assignedMr    User?    @relation("ChemistAssignedMr", fields: [assignedMrId], references: [id])
 
   @@map("chemists")
+  @@index([assignedMrId])
 }
 
 model Product {
@@ -189,7 +190,6 @@ model Visit {
   nextFollowupDate      String?
   followUpStatus        FollowUpStatus       @default(pending)
   followUpNotes         String               @default("")
-  overallRecommendation RecommendationLevel
   hasPersonalOrder      Boolean              @default(false)
   orderProducts         Json
   createdAt             DateTime             @default(now())
@@ -209,7 +209,6 @@ model VisitProduct {
   product              Product             @relation(fields: [productId], references: [id])
   productName          String
   sampleQuantity       Int                 @default(0)
-  recommendationLevel  RecommendationLevel
 
   @@map("visit_products")
 }

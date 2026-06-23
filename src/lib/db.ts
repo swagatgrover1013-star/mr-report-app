@@ -12,6 +12,7 @@ function createClient() {
     database: process.env.DATABASE_NAME,
     connectionLimit: 5,
     allowPublicKeyRetrieval: true,
+    connectTimeout: 20000,
   });
   return new PrismaClient({ adapter });
 }

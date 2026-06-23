@@ -300,6 +300,7 @@ const chemists = chemistNames.map((name, i) => {
     lastVisitDate: null,
     totalVisits: 0,
     tier,
+    assignedMrId: null,
   };
 });
 
@@ -324,6 +325,7 @@ const doctorEntities = doctors.map((d) => {
     lastVisitDate: null,
     totalVisits: 0,
     tier,
+    assignedMrId: null,
     _repName: d.repName,
     _promoted: d.promoted,
     _prescribed: d.prescribed,

@@ -17,7 +17,6 @@ export async function GET(_request: Request, { params }: { params: Promise<{ id:
         productId: p.productId,
         productName: p.productName,
         sampleQuantity: p.sampleQuantity,
-        recommendationLevel: p.recommendationLevel,
       })),
     },
   });
@@ -49,16 +48,14 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
       feedback: body.feedback ?? "",
       competitorProducts: body.competitorProducts ?? "",
       marketFeedback: body.marketFeedback ?? "",
-      overallRecommendation: body.overallRecommendation ?? "moderate",
       hasPersonalOrder: body.hasPersonalOrder ?? false,
       orderProducts: body.orderProducts ?? [],
       products: {
         deleteMany: {},
-        create: body.products.map((p: { productId: string; productName: string; sampleQuantity: number; recommendationLevel: string }) => ({
+        create: body.products.map((p: { productId: string; productName: string; sampleQuantity: number }) => ({
           productId: p.productId,
           productName: p.productName,
           sampleQuantity: p.sampleQuantity ?? 0,
-          recommendationLevel: p.recommendationLevel ?? "moderate",
         })),
       },
     },
@@ -72,7 +69,6 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
         productId: p.productId,
         productName: p.productName,
         sampleQuantity: p.sampleQuantity,
-        recommendationLevel: p.recommendationLevel,
       })),
     },
   });

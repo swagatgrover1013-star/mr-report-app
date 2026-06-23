@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { RecommendationBadge } from "@/components/visits/recommendation-badge";
 import { ActivityTimeline } from "@/components/dashboard/activity-timeline";
 import { useDoctor } from "@/lib/hooks/use-doctors";
 import { useVisits } from "@/lib/hooks/use-visits";

@@ -71,7 +71,7 @@ export default function LoginPage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-white/70 mt-4 max-w-sm text-sm leading-relaxed"
           >
-            Log visits, track doctor recommendations, and keep your entire field team aligned — from first call to repeat prescription.
+            Log visits, manage your doctor network, and keep your entire field team aligned — from first call to repeat prescription.
           </motion.p>
         </div>
 

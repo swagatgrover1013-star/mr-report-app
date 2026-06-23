@@ -3,14 +3,13 @@ import { prisma } from "@/lib/db";
 import { getCurrentUser } from "@/lib/auth";
 import type { PartyType } from "@/types";
 
-function shapeVisit<T extends { products: { productId: string; productName: string; sampleQuantity: number; recommendationLevel: string }[] }>(v: T) {
+function shapeVisit<T extends { products: { productId: string; productName: string; sampleQuantity: number }[] }>(v: T) {
   return {
     ...v,
     products: v.products.map((p) => ({
       productId: p.productId,
       productName: p.productName,
       sampleQuantity: p.sampleQuantity,
-      recommendationLevel: p.recommendationLevel,
     })),
   };
 }
@@ -66,15 +65,13 @@ export async function POST(request: Request) {
       nextFollowupDate: body.nextFollowupDate ?? null,
       followUpStatus: "pending",
       followUpNotes: body.followUpNotes ?? "",
-      overallRecommendation: body.overallRecommendation ?? "moderate",
       hasPersonalOrder: body.hasPersonalOrder ?? false,
       orderProducts: body.orderProducts ?? [],
       products: {
-        create: body.products.map((p: { productId: string; productName: string; sampleQuantity: number; recommendationLevel: string }) => ({
+        create: body.products.map((p: { productId: string; productName: string; sampleQuantity: number }) => ({
           productId: p.productId,
           productName: p.productName,
           sampleQuantity: p.sampleQuantity ?? 0,
-          recommendationLevel: p.recommendationLevel ?? "moderate",
         })),
       },
     },

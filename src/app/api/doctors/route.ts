@@ -6,7 +6,10 @@ export async function GET() {
   const user = await getCurrentUser();
   if (!user) return NextResponse.json({ error: "Not authenticated." }, { status: 401 });
 
-  const doctors = await prisma.doctor.findMany({ orderBy: { name: "asc" } });
+  const doctors = await prisma.doctor.findMany({
+    where: user.role === "mr" ? { assignedMrId: user.id } : undefined,
+    orderBy: { name: "asc" },
+  });
   return NextResponse.json({ doctors });
 }
 
@@ -33,6 +36,7 @@ export async function POST(request: Request) {
       visitFrequency: body.visitFrequency ?? "Monthly",
       notes: body.notes ?? "",
       tier: body.tier ?? "silver",
+      assignedMrId: user.role === "mr" ? user.id : (body.assignedMrId ?? null),
     },
   });
 

@@ -17,7 +17,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { RecommendationBadge } from "@/components/visits/recommendation-badge";
 import { useVisits } from "@/lib/hooks/use-visits";
 import { useDoctors } from "@/lib/hooks/use-doctors";
 import { useChemists } from "@/lib/hooks/use-chemists";
@@ -51,7 +50,6 @@ export default function VisitsPage() {
   const [search, setSearch] = useState("");
   const [partyFilter, setPartyFilter] = useState<string>("all");
   const [mrFilter, setMrFilter] = useState<string>("all");
-  const [recFilter, setRecFilter] = useState<string>("all");
   const [dayFilter, setDayFilter] = useState<string>(today);
 
   const todaysPlans = planEntries.filter((e) => e.date === today);
@@ -90,10 +88,9 @@ export default function VisitsPage() {
       }
       if (partyFilter !== "all" && v.partyId !== partyFilter) return false;
       if (mrFilter !== "all" && v.mrId !== mrFilter) return false;
-      if (recFilter !== "all" && v.overallRecommendation !== recFilter) return false;
       return true;
     });
-  }, [visits, search, partyFilter, mrFilter, recFilter, dayFilter]);
+  }, [visits, search, partyFilter, mrFilter, dayFilter]);
 
   const handleDelete = async (id: string) => {
     await fetch(`/api/visits/${id}`, { method: "DELETE" });
@@ -240,16 +237,6 @@ export default function VisitsPage() {
                   ))}
                 </SelectContent>
               </Select>
-              <Select value={recFilter} onValueChange={setRecFilter}>
-                <SelectTrigger className="w-44 shrink-0"><SelectValue placeholder="Recommendation" /></SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">All Levels</SelectItem>
-                  <SelectItem value="strong">Strongly Recommend</SelectItem>
-                  <SelectItem value="moderate">Moderately Recommend</SelectItem>
-                  <SelectItem value="occasional">Occasionally Recommend</SelectItem>
-                  <SelectItem value="not_interested">Not Interested</SelectItem>
-                </SelectContent>
-              </Select>
               <Button variant="outline" size="icon" className="shrink-0">
                 <Download className="h-4 w-4" />
               </Button>
@@ -282,7 +269,6 @@ export default function VisitsPage() {
                   <th className="text-left font-medium text-slate px-5 py-3.5">MR</th>
                   <th className="text-left font-medium text-slate px-5 py-3.5">Party</th>
                   <th className="text-left font-medium text-slate px-5 py-3.5">Products</th>
-                  <th className="text-left font-medium text-slate px-5 py-3.5">Recommendation</th>
                   <th className="text-left font-medium text-slate px-5 py-3.5">Next Follow-up</th>
                   <th className="text-right font-medium text-slate px-5 py-3.5">Actions</th>
                 </tr>
@@ -308,9 +294,6 @@ export default function VisitsPage() {
                       </td>
                       <td className="px-5 py-3.5 text-slate max-w-48 truncate">
                         {v.products.map((p) => p.productName).join(", ")}
-                      </td>
-                      <td className="px-5 py-3.5">
-                        <RecommendationBadge level={v.overallRecommendation} />
                       </td>
                       <td className="px-5 py-3.5 text-slate whitespace-nowrap">
                         {v.nextFollowupDate ? format(new Date(v.nextFollowupDate), "MMM d") : "—"}
@@ -347,12 +330,9 @@ export default function VisitsPage() {
             >
               <Link href={`/visits/${v.id}`}>
                 <Card className="p-4">
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="min-w-0">
-                      <p className="font-medium text-ink truncate">{v.partyName}</p>
-                      <p className="text-xs text-slate mt-0.5">{v.mrName} · {format(new Date(v.visitDate), "MMM d, yyyy")}</p>
-                    </div>
-                    <RecommendationBadge level={v.overallRecommendation} className="shrink-0" />
+                  <div className="min-w-0">
+                    <p className="font-medium text-ink truncate">{v.partyName}</p>
+                    <p className="text-xs text-slate mt-0.5">{v.mrName} · {format(new Date(v.visitDate), "MMM d, yyyy")}</p>
                   </div>
                   <p className="text-xs text-slate mt-2.5 truncate">{v.products.map((p) => p.productName).join(", ")}</p>
                 </Card>
