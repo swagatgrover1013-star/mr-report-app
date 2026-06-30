@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { getCurrentUser } from "@/lib/auth";
-import { isMonthLocked } from "@/lib/plan-lock";
+import { isMonthLockedForUser } from "@/lib/plan-lock-server";
 
 export async function PATCH(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const user = await getCurrentUser();
@@ -22,7 +22,7 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
   const isStatusOnlyUpdate = Object.keys(body).every((k) => k === "visitStatus" || k === "notes");
   if (!isManager && !isStatusOnlyUpdate) {
     const month = (body.date ?? existing.date).slice(0, 7);
-    if (isMonthLocked(month)) {
+    if (await isMonthLockedForUser(month, existing.mrId)) {
       return NextResponse.json({ error: "This month's plan is locked. Ask your manager for changes." }, { status: 403 });
     }
   }
@@ -59,7 +59,7 @@ export async function DELETE(_request: Request, { params }: { params: Promise<{ 
   if (!isManager && existing.mrId !== user.id) {
     return NextResponse.json({ error: "You can only delete your own plan." }, { status: 403 });
   }
-  if (!isManager && existing.visitStatus === "pending" && isMonthLocked(existing.date.slice(0, 7))) {
+  if (!isManager && existing.visitStatus === "pending" && (await isMonthLockedForUser(existing.date.slice(0, 7), existing.mrId))) {
     return NextResponse.json({ error: "This month's plan is locked. Ask your manager for changes." }, { status: 403 });
   }
 

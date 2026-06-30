@@ -15,7 +15,7 @@ export async function GET(request: Request) {
 
   const submission = await prisma.planSubmission.findUnique({ where: { userId_month: { userId, month } } });
   if (!submission) {
-    return NextResponse.json({ submission: { id: "", userId, month, status: "draft", submittedAt: null, approvedAt: null, approvedBy: "" } });
+    return NextResponse.json({ submission: { id: "", userId, month, status: "draft", submittedAt: null, approvedAt: null, approvedBy: "", unlockedByAdmin: false } });
   }
   return NextResponse.json({ submission });
 }
@@ -42,12 +42,25 @@ export async function PATCH(request: Request) {
   const user = await getCurrentUser();
   if (!user) return NextResponse.json({ error: "Not authenticated." }, { status: 401 });
   if (user.role !== "admin" && user.role !== "manager") {
-    return NextResponse.json({ error: "Only managers and admins can approve plans." }, { status: 403 });
+    return NextResponse.json({ error: "Only managers and admins can do this." }, { status: 403 });
   }
 
   const body = await request.json().catch(() => null);
-  if (!body?.month || !body?.userId || body.status !== "approved") {
-    return NextResponse.json({ error: "Month, userId, and status 'approved' are required." }, { status: 400 });
+  if (!body?.month || !body?.userId) {
+    return NextResponse.json({ error: "Month and userId are required." }, { status: 400 });
+  }
+
+  if (typeof body.unlockedByAdmin === "boolean") {
+    const submission = await prisma.planSubmission.upsert({
+      where: { userId_month: { userId: body.userId, month: body.month } },
+      update: { unlockedByAdmin: body.unlockedByAdmin },
+      create: { userId: body.userId, month: body.month, unlockedByAdmin: body.unlockedByAdmin },
+    });
+    return NextResponse.json({ submission });
+  }
+
+  if (body.status !== "approved") {
+    return NextResponse.json({ error: "Status 'approved' is required." }, { status: 400 });
   }
 
   const submission = await prisma.planSubmission.upsert({

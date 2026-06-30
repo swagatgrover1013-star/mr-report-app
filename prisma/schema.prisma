@@ -245,6 +245,7 @@ model PlanSubmission {
   submittedAt DateTime?
   approvedAt  DateTime?
   approvedBy  String               @default("")
+  unlockedByAdmin Boolean          @default(false)
   createdAt   DateTime             @default(now())
   updatedAt   DateTime             @updatedAt
 

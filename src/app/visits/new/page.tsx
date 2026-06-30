@@ -29,6 +29,7 @@ import {
   Warehouse,
   Loader2,
   ShoppingCart,
+  Bell,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { format } from "date-fns";
@@ -132,6 +133,9 @@ function NewVisitPageInner() {
   const [feedback, setFeedback] = useState("");
   const [competitorProducts, setCompetitorProducts] = useState("");
   const [marketFeedback, setMarketFeedback] = useState("");
+  const [hasReminder, setHasReminder] = useState(false);
+  const [reminderDate, setReminderDate] = useState("");
+  const [reminderNotes, setReminderNotes] = useState("");
 
   const prefilledFromEdit = useRef(false);
   useEffect(() => {
@@ -151,6 +155,9 @@ function NewVisitPageInner() {
     setFeedback(editingVisit.feedback);
     setCompetitorProducts(editingVisit.competitorProducts);
     setMarketFeedback(editingVisit.marketFeedback);
+    setHasReminder(!!editingVisit.nextFollowupDate);
+    setReminderDate(editingVisit.nextFollowupDate ?? "");
+    setReminderNotes(editingVisit.followUpNotes);
   }, [editingVisit]);
 
   const partyOptions = buildPartyOptions(partyType, doctors, chemists, stockists);
@@ -167,7 +174,7 @@ function NewVisitPageInner() {
       case 1:
         return !!selectedPartyId;
       case 2:
-        return !!visitDate && !!visitTime && productLines.length > 0;
+        return !!visitDate && productLines.length > 0;
       default:
         return true;
     }
@@ -235,6 +242,8 @@ function NewVisitPageInner() {
         feedback,
         competitorProducts,
         marketFeedback,
+        nextFollowupDate: hasReminder && reminderDate ? reminderDate : null,
+        followUpNotes: hasReminder ? reminderNotes : "",
       }),
     });
     setSubmitting(false);
@@ -430,15 +439,9 @@ function NewVisitPageInner() {
                           </div>
                         </div>
                       )}
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="space-y-2">
-                          <Label>Visit Date</Label>
-                          <Input type="date" value={visitDate} onChange={(e) => setVisitDate(e.target.value)} />
-                        </div>
-                        <div className="space-y-2">
-                          <Label>Visit Time</Label>
-                          <Input type="time" value={visitTime} onChange={(e) => setVisitTime(e.target.value)} />
-                        </div>
+                      <div className="space-y-2">
+                        <Label>Visit Date</Label>
+                        <Input type="date" value={visitDate} onChange={(e) => setVisitDate(e.target.value)} />
                       </div>
                       <div className="space-y-2">
                         <Label>Visit Type</Label>
@@ -620,6 +623,41 @@ function NewVisitPageInner() {
                           value={marketFeedback}
                           onChange={(e) => setMarketFeedback(e.target.value)}
                         />
+                      </div>
+
+                      <div className="border-t border-border pt-5 space-y-4">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h4 className="text-sm font-medium text-ink flex items-center gap-1.5"><Bell className="h-4 w-4 text-indigo" /> Set a Reminder</h4>
+                            <p className="text-xs text-slate mt-0.5">Follow up with them again on a specific date?</p>
+                          </div>
+                          <div className="flex gap-2 shrink-0">
+                            <Button type="button" size="sm" variant={hasReminder ? "default" : "outline"} onClick={() => setHasReminder(true)}>
+                              Yes
+                            </Button>
+                            <Button type="button" size="sm" variant={!hasReminder ? "default" : "outline"} onClick={() => { setHasReminder(false); setReminderDate(""); setReminderNotes(""); }}>
+                              No
+                            </Button>
+                          </div>
+                        </div>
+
+                        {hasReminder && (
+                          <>
+                            <div className="space-y-2">
+                              <Label>Reminder Date</Label>
+                              <Input type="date" value={reminderDate} onChange={(e) => setReminderDate(e.target.value)} />
+                            </div>
+                            <div className="space-y-2">
+                              <Label>Reminder Notes</Label>
+                              <Textarea
+                                rows={2}
+                                placeholder="What should the reminder be about?"
+                                value={reminderNotes}
+                                onChange={(e) => setReminderNotes(e.target.value)}
+                              />
+                            </div>
+                          </>
+                        )}
                       </div>
                     </div>
                   )}

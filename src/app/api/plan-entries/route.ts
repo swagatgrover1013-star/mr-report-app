@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { getCurrentUser } from "@/lib/auth";
-import { isMonthLocked } from "@/lib/plan-lock";
+import { isMonthLockedForUser } from "@/lib/plan-lock-server";
 
 export async function GET(request: Request) {
   const user = await getCurrentUser();
@@ -41,7 +41,7 @@ export async function POST(request: Request) {
   const mrName = isManager && body.mrName ? body.mrName : user.name;
 
   const month = body.date.slice(0, 7);
-  if (!isManager && isMonthLocked(month)) {
+  if (!isManager && (await isMonthLockedForUser(month, mrId))) {
     return NextResponse.json({ error: "This month's plan is locked. Ask your manager for changes." }, { status: 403 });
   }
 

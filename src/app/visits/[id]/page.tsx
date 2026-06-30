@@ -16,7 +16,6 @@ import { format } from "date-fns";
 import {
   ArrowLeft,
   Calendar,
-  Clock,
   MapPin,
   Stethoscope,
   Package,
@@ -116,19 +115,12 @@ export default function VisitDetailPage() {
 
               <CardContent className="p-6 lg:p-8 space-y-7">
                 {/* Meta info */}
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-5">
                   <div className="flex items-start gap-2.5">
                     <Calendar className="h-4 w-4 text-indigo mt-0.5 shrink-0" />
                     <div>
                       <p className="text-xs text-slate">Date</p>
                       <p className="text-sm font-medium text-ink">{format(new Date(visit.visitDate), "MMM d, yyyy")}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-2.5">
-                    <Clock className="h-4 w-4 text-indigo mt-0.5 shrink-0" />
-                    <div>
-                      <p className="text-xs text-slate">Time</p>
-                      <p className="text-sm font-medium text-ink">{visit.visitTime}</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-2.5">

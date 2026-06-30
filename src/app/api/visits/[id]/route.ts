@@ -48,6 +48,8 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
       feedback: body.feedback ?? "",
       competitorProducts: body.competitorProducts ?? "",
       marketFeedback: body.marketFeedback ?? "",
+      nextFollowupDate: body.nextFollowupDate ?? null,
+      followUpNotes: body.followUpNotes ?? "",
       hasPersonalOrder: body.hasPersonalOrder ?? false,
       orderProducts: body.orderProducts ?? [],
       products: {

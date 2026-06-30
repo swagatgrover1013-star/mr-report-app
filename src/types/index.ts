@@ -157,6 +157,7 @@ export interface PlanSubmission {
   submittedAt: string | null;
   approvedAt: string | null;
   approvedBy: string;
+  unlockedByAdmin: boolean;
 }
 
 export type LeaveType = "casual" | "sick";

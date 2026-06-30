@@ -37,11 +37,11 @@ import { useVisits } from "@/lib/hooks/use-visits";
 import { useCurrentUser } from "@/lib/hooks/use-current-user";
 import { useUsers } from "@/lib/hooks/use-users";
 import { usePlanSubmission } from "@/lib/hooks/use-plan-submission";
-import { lockDateForMonth, isMonthLocked } from "@/lib/plan-lock";
+import { windowOpenDateForMonth, lockDateForMonth, isMonthLocked } from "@/lib/plan-lock";
 import type { PartyType, PlanEntry } from "@/types";
 import {
   Stethoscope, Store, Warehouse, Users, MapPin, Plus, X, Loader2, Pencil, Trash2,
-  ClipboardCheck, CheckCircle2, ChevronLeft, ChevronRight, Lock, Send, ShieldCheck,
+  ClipboardCheck, CheckCircle2, ChevronLeft, ChevronRight, Lock, LockOpen, Send, ShieldCheck,
 } from "lucide-react";
 import { format, startOfMonth, endOfMonth, eachDayOfInterval, getDay, addMonths, subMonths } from "date-fns";
 import { cn } from "@/lib/utils";
@@ -128,9 +128,9 @@ export default function PlanningPage() {
   const [viewMonth, setViewMonth] = useState(currentRealMonth);
   const monthStr = format(viewMonth, "yyyy-MM");
   const monthLabel = format(viewMonth, "MMMM yyyy");
+  const windowOpenDate = windowOpenDateForMonth(monthStr);
   const lockDate = lockDateForMonth(monthStr);
   const monthLocked = isMonthLocked(monthStr);
-  const canEdit = isManager || !monthLocked;
   const canGoToPrevMonth = isManager || viewMonth > currentRealMonth;
 
   const goPrevMonth = () => {
@@ -143,6 +143,9 @@ export default function PlanningPage() {
 
   const { planEntries: entries, loading, refetch } = usePlanEntries(effectiveRepId ?? undefined);
   const { submission, refetch: refetchSubmission } = usePlanSubmission(monthStr, effectiveRepId ?? undefined);
+  const effectivelyLocked = monthLocked && !submission?.unlockedByAdmin;
+  const canEdit = isManager || !effectivelyLocked;
+  const [unlocking, setUnlocking] = useState(false);
 
   const allCities = useMemo(() => Array.from(new Set([...doctors, ...chemists, ...stockists].map((p) => p.city))), [doctors, chemists, stockists]);
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
@@ -328,6 +331,18 @@ export default function PlanningPage() {
     await refetchSubmission();
   };
 
+  const handleToggleUnlock = async () => {
+    if (!effectiveRepId) return;
+    setUnlocking(true);
+    await fetch("/api/plan-submissions", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ month: monthStr, userId: effectiveRepId, unlockedByAdmin: !submission?.unlockedByAdmin }),
+    });
+    setUnlocking(false);
+    await refetchSubmission();
+  };
+
   return (
     <AppShell>
       <TopBar
@@ -380,19 +395,21 @@ export default function PlanningPage() {
         <Card className="p-4">
           <div className="flex items-center justify-between gap-4 flex-wrap">
             <div className="flex items-center gap-2.5 min-w-0">
-              {monthLocked ? <Lock className="h-4 w-4 text-signal-amber shrink-0" /> : <ClipboardCheck className="h-4 w-4 text-indigo shrink-0" />}
+              {effectivelyLocked ? <Lock className="h-4 w-4 text-signal-amber shrink-0" /> : <ClipboardCheck className="h-4 w-4 text-indigo shrink-0" />}
               <div className="min-w-0">
                 <p className="text-sm font-medium text-ink">
                   {submission?.status === "approved" && `Approved${submission.approvedBy ? ` by ${submission.approvedBy}` : ""}`}
-                  {submission?.status === "submitted" && "Submitted — awaiting manager approval"}
-                  {(!submission || submission.status === "draft") && (monthLocked ? "Locked — not submitted in time" : "Draft")}
+                  {submission?.status !== "approved" && submission?.status === "submitted" && "Submitted — awaiting manager approval"}
+                  {submission?.status !== "approved" && submission?.status !== "submitted" && (
+                    effectivelyLocked ? "Locked — not submitted in time" : monthLocked ? "Unlocked by manager" : "Draft"
+                  )}
                 </p>
                 <p className="text-xs text-slate mt-0.5">
                   {isManager
-                    ? `${effectiveRepName || "This rep"} can edit this plan until ${format(lockDate, "MMM d, yyyy")}. You can always edit.`
-                    : monthLocked
-                    ? "This month is locked. Contact your manager for any changes."
-                    : `Submit by ${format(lockDate, "MMM d, yyyy")} — after that it locks and your manager takes over.`}
+                    ? `${effectiveRepName || "This rep"}'s window: ${format(windowOpenDate, "MMM d")} – ${format(lockDate, "MMM d, yyyy 'at' h a")}. You can always edit.`
+                    : effectivelyLocked
+                    ? "This month is locked. Ask your manager to unlock it if you need changes."
+                    : `Submit by ${format(lockDate, "MMM d, yyyy 'at' h a")} — after that it locks and your manager takes over.`}
                 </p>
               </div>
             </div>
@@ -405,6 +422,12 @@ export default function PlanningPage() {
               {isManager && submission?.status === "submitted" && (
                 <Button size="sm" onClick={handleApprove} disabled={approving}>
                   <ShieldCheck className="h-3.5 w-3.5" /> {approving ? "Approving..." : "Approve Plan"}
+                </Button>
+              )}
+              {isManager && monthLocked && (
+                <Button size="sm" variant={submission?.unlockedByAdmin ? "outline" : "default"} onClick={handleToggleUnlock} disabled={unlocking}>
+                  <LockOpen className="h-3.5 w-3.5" />
+                  {unlocking ? "Saving..." : submission?.unlockedByAdmin ? "Re-lock Plan" : "Unlock Plan"}
                 </Button>
               )}
               {submission?.status === "approved" && <Badge variant="default">Approved</Badge>}
