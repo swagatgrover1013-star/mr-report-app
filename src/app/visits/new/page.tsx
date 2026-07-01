@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { AppShell } from "@/components/layout/app-shell";
 import { TopBar } from "@/components/layout/top-bar";
@@ -166,6 +166,19 @@ function NewVisitPageInner() {
     p.name.toLowerCase().includes(partySearch.toLowerCase()) ||
     p.subtitle.toLowerCase().includes(partySearch.toLowerCase())
   );
+
+  // When a doctor is selected, show only their allocated products in the picker
+  const visibleProducts = useMemo(() => {
+    if (partyType !== "doctor" || !selectedPartyId) return products;
+    const doc = doctors.find((d) => d.id === selectedPartyId);
+    const match = doc?.notes?.match(/^Products:\s*(.+)$/i);
+    if (!match) return products;
+    const allocated = match[1].split(",").map((s) => s.trim().toLowerCase()).filter(Boolean);
+    const filtered = products.filter((p) =>
+      allocated.some((a) => p.name.toLowerCase() === a || p.name.toLowerCase().includes(a) || a.includes(p.name.toLowerCase()))
+    );
+    return filtered.length > 0 ? filtered : products;
+  }, [partyType, selectedPartyId, doctors, products]);
 
   const canProceed = () => {
     switch (step) {
@@ -472,7 +485,7 @@ function NewVisitPageInner() {
                           <p className="text-xs text-slate mt-0.5">Add products discussed and samples given.</p>
                         </div>
                       <ProductPicker
-                        products={products}
+                        products={visibleProducts}
                         excludeIds={productLines.map((pl) => pl.productId)}
                         onSelect={addProduct}
                       />
